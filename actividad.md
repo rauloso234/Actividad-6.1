@@ -112,5 +112,60 @@ fi
 ```
 ## ejercicio 8.
 ```sh
+#!/bin/bash
 
+
+echo "introduce una ruta de un archivo"
+read ar
+
+if [[ -e $ar ]]
+then 
+    echo "el archivo existe"
+else
+    echo "Error no es un archivo"
+fi
+```
+## ejercicio 9.
+```sh
+#!/bin/bash
+
+
+echo "introduce una ruta de un archivo"
+read ar
+
+if [[ -f $ar ]]
+then 
+    echo "el archivo existe"
+else
+    echo "esto es un directorio"
+fi
+```
+## ejercicio 10.
+```sh 
+#!/bin/bash
+
+
+echo "introduce una ruta de un archivo"
+read ar
+
+if [[ -r $ar ]]
+then 
+    echo "el archivo tiene permiso de lectura"
+else
+    echo "el archivo no tiene permisos de lectura"
+fi
+
+if [[ -w $ar ]]
+then 
+    echo "el archivo tiene permiso de escritura"
+else
+    echo "el archivo no tiene permisos de escritura"
+fi
+
+if [[ -x $ar ]]
+then 
+    echo "el archivo tiene permiso de ejecucion"
+else
+    echo "el archivo no tiene permisos de ejecucion"
+fi
 ```
