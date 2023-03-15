@@ -271,3 +271,38 @@ do
     fi
 done
 ```
+## ejercicio 19.
+```sh
+#!/bin/bash
+
+palabra="";
+archivo=fichero18.txt
+
+if [[ -f "$archivo" ]]
+then
+    rm "$archivo"
+fi
+
+while [ "$palabra" != ":q" ]
+do
+    read -p "Introduzca una palabra: " palabra
+    if [[ "$palabra" != ":q" ]]
+    then
+        echo "$palabra" >> "$archivo"
+    fi
+done
+```
+## ejercicio 20.
+```sh
+#!/bin/bash
+
+archivo="numeros.txt"
+
+read -p "Introduce un número: " num
+
+if  grep -q "$num" "$archivo"
+then
+    echo "El número $num se encuentra en el $archivo"
+else
+    echo "El número $num no se encuentra en el $archivo"
+fi
