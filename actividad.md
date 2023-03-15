@@ -1,5 +1,5 @@
-### Actividad-6.1
-# Raúl Fernández Turín
+# Actividad-6.1
+### Raúl Fernández Turín
 ## ejercicio 1.
 
 ```sh
@@ -14,7 +14,7 @@ else
     echo "${num} es negativo"
 fi
 ```
-##ejercicio 2.
+## ejercicio 2.
 ```sh
 #!/bin/bash
 
@@ -27,7 +27,7 @@ else
     echo "${num} es positivo"
 fi
 ```
-##ejercicio 3.
+## ejercicio 3.
 ```sh
 #!/bin/bash
 
@@ -40,7 +40,7 @@ else
     echo "${num} no es cero"
 fi
 ```
-##ejercicio 4.
+## ejercicio 4.
 ```sh
 #!/bin/bash
 
@@ -58,7 +58,7 @@ else
     fi
 fi
 ```
-##ejercicio 5.
+## ejercicio 5.
 ```sh
 #!/bin/bash
 
@@ -69,4 +69,60 @@ then
 else
     echo "Error: mas de dos parametros parametros introducidos"
 fi
+```
+## ejercicio 6.
+```sh
+#!/bin/bash
+
+
+if [ $# -eq 3 ]
+then 
+   case $3 in
+    "+")
+    echo $(($1+$2))
+    ;;
+    "-")
+    echo $(($1-$2))
+    ;;
+    "*")
+    echo $(($1*$2))
+    ;;
+    "/")
+    echo $(($1/$2))
+    ;;
+    esac
+else
+    echo "Error: fallo en la cantidad de parametros introducidos"
+fi
+```
+## ejercicio7.
+```sh
+#!/bin/bash
+
+
+if [ $# -eq 3 ]
+then 
+   case $3 in
+    "+")
+    echo $(($1+$2))
+    ;;
+    "-")
+    echo $(($1-$2))
+    ;;
+    "*")
+    echo $(($1*$2))
+    ;;
+    "/")
+    echo $(($1/$2))
+    ;;
+    *)
+    echo "Error: introduce "+,-,*,/""
+    esac
+else
+    echo "Error: fallo en la cantidad de parametros introducidos"
+fi
+```
+## ejercicio 8.
+```sh
+
 ```
