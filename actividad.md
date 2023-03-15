@@ -184,4 +184,90 @@ done
 ```
 ## ejercicio 12.
 ```sh
+#!/bin/bash
 
+read -p "Introduce una palabra: " palabra
+
+for i in {1..10}
+do
+    echo $palabra
+done
+```
+## ejercicio 13.
+```sh
+#!/bin/bash
+
+for (( i=0; i<$1; i++ ))
+do 
+    echo hola
+done
+```
+## ejercicio 14.
+```sh
+#!/bin/bash
+
+for (( i=0; i<=$1; i++ ))
+do 
+    echo $i
+done
+```
+## ejercicio 15.
+```sh
+#!/bin/bash
+
+resultado=0;
+
+for (( i=0; i<=$1; i++ ))
+do 
+    resultado=$(($resultado+$i))
+done
+
+echo $resultado
+```
+## ejercicio 16.
+```sh
+#!/bin/bash
+
+num1=$1
+num2=$2
+
+echo "El valor de num1 es $num1, el valor de num2 es $num2"
+
+aux=$num1
+num1=$num2
+num2=$aux
+
+echo "El valor de num1 es $num1, el valor de num2 es $num2"
+```
+## ejercicio 17.
+```sh
+#!/bin/bash
+
+palabra="";
+
+while [ "$palabra" != ":q" ]
+do
+    read -p "Introduzca una palabra: " palabra
+done
+```
+## ejercicio 18.
+```sh 
+#!/bin/bash
+
+palabra="";
+archivo=fichero18.txt
+
+if [[ -f "$archivo" ]]
+then
+    rm "$archivo"
+fi
+
+while [ "$palabra" != ":q" ]
+do
+    read -p "Introduzca una palabra: " palabra
+    if [[ "$palabra" != ":q" ]]
+    then
+        echo "$palabra" >> "$archivo"
+    fi
+done
+```
