@@ -75,25 +75,13 @@ fi
 #!/bin/bash
 
 
-if [ $# -eq 3 ]
+if [ $# -eq 2 ]
 then 
-   case $3 in
-    "+")
-    echo $(($1+$2))
-    ;;
-    "-")
-    echo $(($1-$2))
-    ;;
-    "*")
-    echo $(($1*$2))
-    ;;
-    "/")
-    echo $(($1/$2))
-    ;;
-    esac
+    echo "el numero $1 mas el numero $2 es $(($1+$2))"
 else
-    echo "Error: fallo en la cantidad de parametros introducidos"
+    echo "se han introducido mas de dos parametros"
 fi
+
 ```
 ## ejercicio7.
 ```sh
