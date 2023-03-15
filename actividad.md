@@ -169,3 +169,19 @@ else
     echo "el archivo no tiene permisos de ejecucion"
 fi
 ```
+## ejercicio 11.
+```sh
+#!/bin/bash
+
+
+num=0
+
+while [ $num != 50 ]
+do
+echo "Hola"
+num=$(($num+1))
+done
+```
+## ejercicio 12.
+```sh
+
