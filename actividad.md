@@ -7,7 +7,7 @@
 
 echo "introduce un numero"
 read num
-if [ $num .ge 0 ]
+if [ $num -ge 0 ]
 then 
     echo "${num} es positivo"
 else
